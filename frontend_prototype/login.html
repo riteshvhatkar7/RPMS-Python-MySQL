@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="login-page">
+        <section class="login-card">
+
+            <div class="brand">
+                <div class="avatar">R</div>
+                <span>RPMS</span>
+            </div>
+
+            <h2>Welcome Back!</h2>
+            <p class="subtitle">
+                Recruitment & Placement Management System
+            </p>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="email">Email Address / Username</label>
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email or username"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Login As</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select Your Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="recruiter">Recruiter</option>
+                        <option value="placement-officer">Placement Officer</option>
+                    </select>
+                </div>
+
+                <p id="loginMessage" role="alert" class="error-message"
+                   style="display:none;">
+                </p>
+
+                <div class="forgot-password">
+                    <a href="#" id="forgotPassword">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Login to Dashboard
+                </button>
+
+            </form>
+
+            <div class="footer-note">
+                Authorized Users Only<br>
+                © 2026 RPMS
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        const loginForm = document.getElementById("loginForm");
+        const loginMessage = document.getElementById("loginMessage");
+
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const role = document.getElementById("role").value;
+
+            if (!email || !password || !role) {
+                loginMessage.textContent = "Please fill all required fields.";
+                loginMessage.style.display = "block";
+                return;
+            }
+
+            // Static UI prototype: no real authentication.
+            sessionStorage.setItem("rpms_demo_user", JSON.stringify({
+                username: email,
+                role: role
+            }));
+
+            window.location.href = "dashboard.html";
+        });
+
+        document.getElementById("forgotPassword")
+            .addEventListener("click", function(event) {
+                event.preventDefault();
+                alert("Please contact your system administrator to reset your password.");
+            });
+    </script>
+
+</body>
+</html>

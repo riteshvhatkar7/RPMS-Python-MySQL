@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="avatar">R</div>
+            <h2>RPMS</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html" class="active">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="login.html">Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Applications</h2>
+                <p class="subtitle">Manage candidate job applications</p>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">A</div>
+                <div>
+                    <strong>System Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="page-heading">
+            <div>
+                <h2>Application Management</h2>
+                <p>Track and manage the recruitment application process.</p>
+            </div>
+        </section>
+
+        <!-- Application Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-label">Total Applications</span>
+                <h2>250</h2>
+                <p>All submitted applications</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Applied</span>
+                <h2>85</h2>
+                <p>New applications</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Shortlisted</span>
+                <h2>65</h2>
+                <p>Eligible candidates</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Selected</span>
+                <h2>35</h2>
+                <p>Selected candidates</p>
+            </div>
+
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Search Applications</h2>
+            </div>
+
+            <form class="filter-form" action="#" method="get">
+
+                <div class="form-group">
+                    <label for="search">Candidate or Application ID</label>
+                    <input
+                        type="search"
+                        id="search"
+                        name="search"
+                        placeholder="Search application..."
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <select id="company" name="company">
+                        <option value="">All Companies</option>
+                        <option>Tech Solutions</option>
+                        <option>Innovate Systems</option>
+                        <option>WebTech Pvt Ltd</option>
+                        <option>NextGen Technologies</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Application Status</label>
+                    <select id="status" name="status">
+                        <option value="">All Statuses</option>
+                        <option>Applied</option>
+                        <option>Shortlisted</option>
+                        <option>Interview</option>
+                        <option>Selected</option>
+                        <option>Offered</option>
+                        <option>Joined</option>
+                        <option>Rejected</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Search
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Applications Table -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Application Records</h2>
+                <span class="status active">250 Applications</span>
+            </div>
+
+            <div class="table-responsive">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application ID</th>
+                            <th>Candidate</th>
+                            <th>Job Title</th>
+                            <th>Company</th>
+                            <th>Applied Date</th>
+                            <th>Eligibility</th>
+                            <th>Application Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>APP001</td>
+                            <td>Rahul Patil</td>
+                            <td>Python Developer</td>
+                            <td>Tech Solutions</td>
+                            <td>05-Nov-2026</td>
+                            <td>
+                                <span class="status active">Eligible</span>
+                            </td>
+                            <td>
+                                <span class="status active">Shortlisted</span>
+                            </td>
+                            <td>
+                                <a href="candidate-details.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>APP002</td>
+                            <td>Priya Sharma</td>
+                            <td>Frontend Developer</td>
+                            <td>Innovate Systems</td>
+                            <td>06-Nov-2026</td>
+                            <td>
+                                <span class="status active">Eligible</span>
+                            </td>
+                            <td>
+                                <span class="status pending">Applied</span>
+                            </td>
+                            <td>
+                                <a href="candidate-details.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>APP003</td>
+                            <td>Amit Jadhav</td>
+                            <td>Java Developer</td>
+                            <td>WebTech Pvt Ltd</td>
+                            <td>07-Nov-2026</td>
+                            <td>
+                                <span class="status active">Eligible</span>
+                            </td>
+                            <td>
+                                <span class="status pending">Interview</span>
+                            </td>
+                            <td>
+                                <a href="candidate-details.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>APP004</td>
+                            <td>Neha Patil</td>
+                            <td>Software Testing Intern</td>
+                            <td>NextGen Technologies</td>
+                            <td>08-Nov-2026</td>
+                            <td>
+                                <span class="status active">Eligible</span>
+                            </td>
+                            <td>
+                                <span class="status active">Selected</span>
+                            </td>
+                            <td>
+                                <a href="candidate-details.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>APP005</td>
+                            <td>Vikas More</td>
+                            <td>Python Developer</td>
+                            <td>Tech Solutions</td>
+                            <td>09-Nov-2026</td>
+                            <td>
+                                <span class="status inactive">Not Eligible</span>
+                            </td>
+                            <td>
+                                <span class="status inactive">Rejected</span>
+                            </td>
+                            <td>
+                                <a href="candidate-details.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>APP006</td>
+                            <td>Sneha Kulkarni</td>
+                            <td>Frontend Developer</td>
+                            <td>Innovate Systems</td>
+                            <td>10-Nov-2026</td>
+                            <td>
+                                <span class="status active">Eligible</span>
+                            </td>
+                            <td>
+                                <span class="status pending">Offered</span>
+                            </td>
+                            <td>
+                                <a href="candidate-details.html">View</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <footer class="page-footer">
+            © 2026 Recruitment & Placement Management System
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

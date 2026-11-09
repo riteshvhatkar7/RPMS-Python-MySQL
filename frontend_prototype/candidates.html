@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidates | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="avatar">R</div>
+            <h2>RPMS</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html" class="active">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="login.html">Logout</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Candidates</h2>
+                <p class="subtitle">Manage registered candidates</p>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">A</div>
+                <div>
+                    <strong>System Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+            <div>
+                <h2>Candidate Management</h2>
+                <p>View and manage all registered candidates.</p>
+            </div>
+
+            <a href="candidate-form.html" class="btn btn-primary">
+                + Add Candidate
+            </a>
+        </section>
+
+        <!-- Summary -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-label">Total Candidates</span>
+                <h2>250</h2>
+                <p>Registered candidates</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Active Candidates</span>
+                <h2>220</h2>
+                <p>Currently active</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Placed Candidates</span>
+                <h2>85</h2>
+                <p>Successfully placed</p>
+            </div>
+
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Candidate List</h2>
+            </div>
+
+            <form class="filter-form" action="#" method="get">
+
+                <div class="form-group">
+                    <label for="search">Search Candidate</label>
+                    <input
+                        type="search"
+                        id="search"
+                        name="search"
+                        placeholder="Name, ID or email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="technology">Technology</label>
+                    <select id="technology" name="technology">
+                        <option value="">All Technologies</option>
+                        <option>Python</option>
+                        <option>Java</option>
+                        <option>Web Development</option>
+                        <option>Testing</option>
+                        <option>Data Analytics</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option value="">All Status</option>
+                        <option>Active</option>
+                        <option>Placed</option>
+                        <option>Inactive</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Search
+                </button>
+
+            </form>
+
+            <!-- Candidate Table -->
+            <div class="table-responsive">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Candidate ID</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Qualification</th>
+                            <th>Passing Year</th>
+                            <th>Percentage</th>
+                            <th>Technology</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>CAN001</td>
+                            <td>Rahul Patil</td>
+                            <td>rahul@example.com</td>
+                            <td>9876543210</td>
+                            <td>BSc Computer Science</td>
+                            <td>2026</td>
+                            <td>78%</td>
+                            <td>Python</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>
+                                <a href="candidate-details.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>CAN002</td>
+                            <td>Priya Sharma</td>
+                            <td>priya@example.com</td>
+                            <td>9876543211</td>
+                            <td>BCA</td>
+                            <td>2025</td>
+                            <td>85%</td>
+                            <td>Java</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>
+                                <a href="candidate-details.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>CAN003</td>
+                            <td>Amit Desai</td>
+                            <td>amit@example.com</td>
+                            <td>9876543212</td>
+                            <td>BSc IT</td>
+                            <td>2026</td>
+                            <td>72%</td>
+                            <td>Web Development</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>
+                                <a href="candidate-details.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>CAN004</td>
+                            <td>Neha Kulkarni</td>
+                            <td>neha@example.com</td>
+                            <td>9876543213</td>
+                            <td>MCA</td>
+                            <td>2026</td>
+                            <td>81%</td>
+                            <td>Python</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>
+                                <a href="candidate-details.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>CAN005</td>
+                            <td>Vikas Jadhav</td>
+                            <td>vikas@example.com</td>
+                            <td>9876543214</td>
+                            <td>BTech</td>
+                            <td>2025</td>
+                            <td>68%</td>
+                            <td>Testing</td>
+                            <td><span class="status inactive">Inactive</span></td>
+                            <td>
+                                <a href="candidate-details.html">View</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <footer class="page-footer">
+            © 2026 Recruitment & Placement Management System
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

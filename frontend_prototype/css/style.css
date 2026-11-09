@@ -1,0 +1,1156 @@
+
+/* =====================================================
+   RECRUITMENT & PLACEMENT MANAGEMENT SYSTEM
+   PROFESSIONAL FINAL STYLESHEET
+   Theme: Corporate Blue & White
+===================================================== */
+
+/* ===================== 1. ROOT ===================== */
+
+:root {
+    --primary: #1f4e79;
+    --primary-dark: #163a5c;
+    --primary-light: #eaf2f8;
+    --secondary: #3478ad;
+
+    --success: #198754;
+    --success-light: #d1e7dd;
+    --danger: #dc3545;
+    --danger-light: #f8d7da;
+    --warning: #ffc107;
+    --warning-light: #fff3cd;
+    --info: #0dcaf0;
+    --info-light: #cff4fc;
+
+    --background: #f4f7fb;
+    --surface: #ffffff;
+    --text: #25364a;
+    --muted: #718096;
+    --border: #e2e8f0;
+
+    --sidebar-width: 255px;
+
+    --radius: 10px;
+    --radius-small: 6px;
+
+    --shadow: 0 3px 12px rgba(31, 78, 121, 0.07);
+    --shadow-hover: 0 7px 20px rgba(31, 78, 121, 0.12);
+
+    --transition: all 0.25s ease;
+}
+
+/* ===================== 2. RESET ===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===================== 3. MAIN LAYOUT ===================== */
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ===================== 4. SIDEBAR ===================== */
+
+.sidebar {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    min-height: 100vh;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--primary);
+    color: var(--surface);
+
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 16px;
+    min-height: 75px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.sidebar-brand h2 {
+    color: var(--surface);
+    font-size: 12px;
+    line-height: 1.35;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.sidebar-brand .avatar {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    font-size: 16px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 18px 12px;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+
+    min-height: 43px;
+    padding: 10px 14px;
+
+    border-radius: 7px;
+    color: rgba(255,255,255,0.88);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+.sidebar-nav a:hover {
+    background: rgba(255,255,255,0.13);
+    color: var(--surface);
+    padding-left: 18px;
+}
+
+.sidebar-nav a.active {
+    background: rgba(255,255,255,0.19);
+    color: var(--surface);
+    font-weight: 700;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.sidebar-footer a {
+    display: block;
+    width: 100%;
+    padding: 11px 15px;
+
+    text-align: center;
+    color: var(--surface);
+    background: var(--danger);
+
+    border-radius: 7px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.sidebar-footer a:hover {
+    background: #bb2d3b;
+}
+
+/* ===================== 5. MAIN CONTENT ===================== */
+
+.main-content {
+    width: calc(100% - var(--sidebar-width));
+    min-width: 0;
+    min-height: 100vh;
+
+    margin-left: var(--sidebar-width);
+    padding: 26px 30px;
+}
+
+/* ===================== 6. TOPBAR ===================== */
+
+.topbar {
+    min-height: 76px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background: var(--surface);
+    padding: 16px 22px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+    margin-bottom: 25px;
+}
+
+.topbar h2 {
+    color: var(--primary);
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.user-profile strong {
+    display: block;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.user-profile small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* ===================== 7. AVATAR ===================== */
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--secondary);
+    color: var(--surface);
+
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+/* ===================== 8. PAGE HEADING ===================== */
+
+.page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.page-heading h2 {
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.page-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ===================== 9. WELCOME SECTION ===================== */
+
+.welcome-section {
+    padding: 25px 28px;
+    margin-bottom: 24px;
+
+    color: var(--surface);
+    background: linear-gradient(120deg, #1f4e79, #3478ad);
+
+    border-radius: var(--radius);
+}
+
+.welcome-section h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.welcome-section p {
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+}
+
+/* ===================== 10. DASHBOARD STATS ===================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    min-width: 0;
+    background: var(--surface);
+
+    padding: 21px;
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--secondary);
+
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.stat-card h2 {
+    color: var(--primary);
+    font-size: 28px;
+    line-height: 1.3;
+    margin: 8px 0 5px;
+}
+
+.stat-card p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* ===================== 11. CONTENT SECTIONS ===================== */
+
+.content-section {
+    width: 100%;
+    min-width: 0;
+
+    padding: 22px;
+    margin-bottom: 23px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    color: var(--primary);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.section-header a {
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.section-header a:hover {
+    text-decoration: underline;
+}
+
+/* ===================== 12. TABLES ===================== */
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 7px;
+}
+
+table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    background: var(--surface);
+}
+
+thead {
+    background: var(--primary-light);
+}
+
+th {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+
+    padding: 14px 15px;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 13px 15px;
+    font-size: 13px;
+    color: var(--text);
+
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+tbody tr {
+    transition: var(--transition);
+}
+
+tbody tr:hover {
+    background: #f7faff;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===================== 13. STATUS BADGES ===================== */
+
+.status {
+    display: inline-block;
+    padding: 5px 11px;
+
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status.active,
+.status.open,
+.status.selected,
+.status.joined {
+    color: #146c43;
+    background: var(--success-light);
+}
+
+.status.pending,
+.status.applied,
+.status.shortlisted {
+    color: #856404;
+    background: var(--warning-light);
+}
+
+.status.rejected,
+.status.closed,
+.status.inactive {
+    color: #842029;
+    background: var(--danger-light);
+}
+
+.status.interview,
+.status.offered,
+.status.scheduled {
+    color: #084298;
+    background: #cfe2ff;
+}
+
+/* ===================== 14. BUTTONS ===================== */
+
+.btn,
+button.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    min-height: 38px;
+    padding: 9px 17px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: var(--primary);
+    color: var(--surface);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.btn:hover,
+button.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--surface);
+}
+
+.btn-success {
+    background: var(--success);
+    color: var(--surface);
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: var(--surface);
+}
+
+.btn-warning {
+    background: var(--warning);
+    color: #212529;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: var(--surface);
+}
+
+.btn-sm {
+    min-height: 30px;
+    padding: 6px 11px;
+    font-size: 11px;
+}
+
+/* ===================== 15. FORMS ===================== */
+
+.form-container {
+    width: 100%;
+    padding: 25px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+    margin-bottom: 24px;
+}
+
+.form-container h2,
+.form-container h3 {
+    color: var(--primary);
+    margin-bottom: 19px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.form-group {
+    min-width: 0;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    min-height: 42px;
+
+    padding: 10px 12px;
+
+    color: var(--text);
+    background: var(--surface);
+
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(52,120,173,0.12);
+}
+
+.form-group textarea {
+    min-height: 105px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a0aec0;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-note {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+/* ===================== 16. FILTER SECTION ===================== */
+
+.filter-form {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    padding: 19px;
+    margin-bottom: 22px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.filter-form .form-group {
+    flex: 1 1 160px;
+    margin: 0;
+}
+
+.filter-form button {
+    flex-shrink: 0;
+}
+
+/* ===================== 17. STATUS OVERVIEW ===================== */
+
+.status-overview {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.status-item {
+    padding: 17px 10px;
+    text-align: center;
+
+    background: var(--primary-light);
+    border: 1px solid #d9e7f3;
+    border-radius: 8px;
+}
+
+.status-item span {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status-item strong {
+    display: block;
+    color: var(--primary);
+    font-size: 23px;
+    margin-top: 5px;
+}
+
+/* ===================== 18. PROFILE DETAILS ===================== */
+
+.profile-card {
+    padding: 24px;
+    margin-bottom: 22px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-avatar {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--primary);
+    background: var(--primary-light);
+
+    border-radius: 50%;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.profile-info h2 {
+    color: var(--primary);
+    font-size: 20px;
+}
+
+.profile-info p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.detail-item {
+    padding: 13px;
+    background: #f7f9fc;
+    border-radius: 7px;
+}
+
+.detail-item label {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.detail-item strong {
+    color: var(--text);
+    font-size: 13px;
+}
+
+/* ===================== 19. WORKFLOW ===================== */
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.workflow-item {
+    padding: 20px;
+    text-align: center;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--secondary);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.workflow-item h3 {
+    color: var(--primary);
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.workflow-item p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* ===================== 20. REPORT CARDS ===================== */
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.report-card {
+    padding: 22px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.report-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.report-card h3 {
+    color: var(--primary);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.report-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* ===================== 21. LOGIN PAGE ===================== */
+
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background: linear-gradient(135deg, #163a5c, #3478ad);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 35px;
+
+    background: var(--surface);
+    border-radius: 13px;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,0.16);
+}
+
+.login-card h2 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 7px;
+}
+
+.login-card .login-subtitle {
+    color: var(--muted);
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.login-card .btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ===================== 22. FOOTER ===================== */
+
+.page-footer {
+    width: 100%;
+    padding: 18px 10px;
+    margin-top: 22px;
+
+    color: var(--muted);
+    text-align: center;
+    font-size: 11px;
+}
+
+/* ===================== 23. GENERAL UTILITIES ===================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-success {
+    color: var(--success);
+}
+
+.text-danger {
+    color: var(--danger);
+}
+
+.text-muted {
+    color: var(--muted);
+}
+
+.mt-1 { margin-top: 5px; }
+.mt-2 { margin-top: 10px; }
+.mt-3 { margin-top: 15px; }
+.mt-4 { margin-top: 20px; }
+
+.mb-1 { margin-bottom: 5px; }
+.mb-2 { margin-bottom: 10px; }
+.mb-3 { margin-bottom: 15px; }
+.mb-4 { margin-bottom: 20px; }
+
+/* ===================== 24. RESPONSIVE TABLET ===================== */
+
+@media (max-width: 1100px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .report-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .workflow-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .status-overview {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ===================== 25. RESPONSIVE MOBILE ===================== */
+
+@media (max-width: 768px) {
+    .app-layout {
+        display: block;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+    }
+
+    .sidebar-brand {
+        min-height: 65px;
+        padding: 12px 16px;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .sidebar-nav a {
+        flex: 0 0 auto;
+        min-height: 38px;
+        padding: 8px 12px;
+        white-space: nowrap;
+    }
+
+    .sidebar-footer {
+        padding: 10px 15px;
+    }
+
+    .sidebar-footer a {
+        padding: 9px;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 18px 15px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 17px;
+    }
+
+    .topbar h2 {
+        font-size: 19px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .form-grid,
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .status-overview {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ===================== 26. SMALL MOBILE ===================== */
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 12px;
+    }
+
+    .stats-grid,
+    .workflow-grid,
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section,
+    .form-container,
+    .profile-card {
+        padding: 15px;
+    }
+
+    .welcome-section {
+        padding: 19px;
+    }
+
+    .welcome-section h2 {
+        font-size: 19px;
+    }
+
+    .stat-card {
+        padding: 17px;
+    }
+
+    .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .login-card {
+        padding: 25px 18px;
+    }
+
+    .filter-form {
+        padding: 14px;
+    }
+}
+
+/* ===================== 27. PRINT SETTINGS ===================== */
+
+@media print {
+    .sidebar,
+    .topbar,
+    .filter-form,
+    .btn,
+    .page-footer {
+        display: none !important;
+    }
+
+    .main-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #ffffff;
+    }
+
+    .content-section,
+    .stat-card,
+    .report-card {
+        box-shadow: none;
+        border: 1px solid #dddddd;
+    }
+
+    table {
+        min-width: 100%;
+    }
+}
+
+/* LOGIN PAGE ALIGNMENT FIX */
+
+body:has(.login-container) {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.login-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    flex-shrink: 0;
+}

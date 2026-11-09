@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="avatar">R</div>
+            <h2>RPMS</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html" class="active">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="login.html">Logout</a>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Jobs</h2>
+                <p class="subtitle">Job Opening Management</p>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">A</div>
+                <div>
+                    <strong>System Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <div>
+                <h2>Job Openings</h2>
+                <p>Manage job opportunities from registered companies.</p>
+            </div>
+
+            <a href="job-form.html" class="btn btn-primary">
+                + Add New Job
+            </a>
+
+        </section>
+
+        <!-- Job Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-label">Total Jobs</span>
+                <h2>48</h2>
+                <p>All job records</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Open Jobs</span>
+                <h2>32</h2>
+                <p>Currently accepting applications</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Closed Jobs</span>
+                <h2>12</h2>
+                <p>Application process completed</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Total Openings</span>
+                <h2>125</h2>
+                <p>Available positions</p>
+            </div>
+
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Search and Filter Jobs</h2>
+            </div>
+
+            <form class="filter-form" action="#" method="get">
+
+                <div class="form-group">
+                    <label for="jobSearch">Job Title</label>
+                    <input
+                        type="search"
+                        id="jobSearch"
+                        name="search"
+                        placeholder="Search job title or code"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <select id="company" name="company">
+                        <option value="">All Companies</option>
+                        <option>Tech Solutions</option>
+                        <option>Innovate Systems</option>
+                        <option>WebTech Pvt Ltd</option>
+                        <option>NextGen Technologies</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="employmentType">Employment Type</label>
+                    <select id="employmentType" name="employment_type">
+                        <option value="">All Types</option>
+                        <option>Full Time</option>
+                        <option>Internship</option>
+                        <option>Part Time</option>
+                        <option>Contract</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="jobStatus">Job Status</label>
+                    <select id="jobStatus" name="status">
+                        <option value="">All Status</option>
+                        <option>Open</option>
+                        <option>Closed</option>
+                        <option>On Hold</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Search
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Jobs Table -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Available Job Openings</h2>
+                <span class="status active">32 Open Jobs</span>
+            </div>
+
+            <div class="table-responsive">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Job ID</th>
+                            <th>Job Title</th>
+                            <th>Company</th>
+                            <th>Employment Type</th>
+                            <th>Location</th>
+                            <th>Openings</th>
+                            <th>Package (LPA)</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>JOB001</td>
+                            <td>Python Developer</td>
+                            <td>Tech Solutions</td>
+                            <td>Full Time</td>
+                            <td>Pune</td>
+                            <td>5</td>
+                            <td>3.0 - 5.0</td>
+                            <td>25-Nov-2026</td>
+                            <td>
+                                <span class="status active">Open</span>
+                            </td>
+                            <td>
+                                <a href="job-form.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>JOB002</td>
+                            <td>Frontend Developer</td>
+                            <td>Innovate Systems</td>
+                            <td>Full Time</td>
+                            <td>Mumbai</td>
+                            <td>3</td>
+                            <td>2.5 - 4.0</td>
+                            <td>30-Nov-2026</td>
+                            <td>
+                                <span class="status active">Open</span>
+                            </td>
+                            <td>
+                                <a href="job-form.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>JOB003</td>
+                            <td>Java Developer</td>
+                            <td>WebTech Pvt Ltd</td>
+                            <td>Full Time</td>
+                            <td>Kolhapur</td>
+                            <td>4</td>
+                            <td>3.0 - 4.5</td>
+                            <td>20-Nov-2026</td>
+                            <td>
+                                <span class="status active">Open</span>
+                            </td>
+                            <td>
+                                <a href="job-form.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>JOB004</td>
+                            <td>Software Testing Intern</td>
+                            <td>NextGen Technologies</td>
+                            <td>Internship</td>
+                            <td>Bengaluru</td>
+                            <td>10</td>
+                            <td>1.5 - 2.0</td>
+                            <td>15-Nov-2026</td>
+                            <td>
+                                <span class="status active">Open</span>
+                            </td>
+                            <td>
+                                <a href="job-form.html">View</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>JOB005</td>
+                            <td>Web Developer</td>
+                            <td>Tech Solutions</td>
+                            <td>Full Time</td>
+                            <td>Pune</td>
+                            <td>0</td>
+                            <td>3.0 - 4.0</td>
+                            <td>01-Nov-2026</td>
+                            <td>
+                                <span class="status inactive">Closed</span>
+                            </td>
+                            <td>
+                                <a href="job-form.html">View</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <footer class="page-footer">
+            © 2026 Recruitment & Placement Management System
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

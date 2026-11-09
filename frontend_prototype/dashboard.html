@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="avatar">R</div>
+            <h2>RECRUITMENT & PLACEMENT
+MANAGEMENT SYSTEM</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="login.html">Logout</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+            <div>
+                <h2>Dashboard</h2>
+                <p class="subtitle">Recruitment & Placement Overview</p>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">A</div>
+                <div>
+                    <strong>System Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- Welcome -->
+        <section class="welcome-section">
+            <h2>Welcome Back, Admin!</h2>
+            <p>
+                Here is an overview of your recruitment and placement activities.
+            </p>
+        </section>
+
+        <!-- Summary Cards -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-label">Total Candidates</span>
+                <h2>250</h2>
+                <p>Registered candidates</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Active Companies</span>
+                <h2>35</h2>
+                <p>Registered companies</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Open Jobs</span>
+                <h2>18</h2>
+                <p>Currently available jobs</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Applications</span>
+                <h2>420</h2>
+                <p>Total job applications</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Interviews</span>
+                <h2>64</h2>
+                <p>Scheduled interviews</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Placements</span>
+                <h2>85</h2>
+                <p>Successfully placed</p>
+            </div>
+
+        </section>
+
+        <!-- Recent Candidates -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Recent Candidates</h2>
+                <a href="candidates.html">View All</a>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Candidate ID</th>
+                            <th>Name</th>
+                            <th>Technology</th>
+                            <th>Percentage</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>CAN001</td>
+                            <td>Rahul Patil</td>
+                            <td>Python</td>
+                            <td>78%</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>CAN002</td>
+                            <td>Priya Sharma</td>
+                            <td>Java</td>
+                            <td>85%</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>CAN003</td>
+                            <td>Amit Desai</td>
+                            <td>Web Development</td>
+                            <td>72%</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>CAN004</td>
+                            <td>Neha Kulkarni</td>
+                            <td>Python</td>
+                            <td>81%</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Recent Jobs -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Recent Job Openings</h2>
+                <a href="jobs.html">View All</a>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Job Code</th>
+                            <th>Company</th>
+                            <th>Job Title</th>
+                            <th>Location</th>
+                            <th>Openings</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>JOB001</td>
+                            <td>Tech Solutions</td>
+                            <td>Python Developer</td>
+                            <td>Pune</td>
+                            <td>5</td>
+                            <td><span class="status active">Open</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>JOB002</td>
+                            <td>Innovate Systems</td>
+                            <td>Java Developer</td>
+                            <td>Mumbai</td>
+                            <td>3</td>
+                            <td><span class="status active">Open</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>JOB003</td>
+                            <td>WebTech Pvt Ltd</td>
+                            <td>Frontend Developer</td>
+                            <td>Kolhapur</td>
+                            <td>2</td>
+                            <td><span class="status active">Open</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Application Status -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Application Status Overview</h2>
+                <a href="applications.html">View Applications</a>
+            </div>
+
+            <div class="status-overview">
+
+                <div class="status-item">
+                    <span>Applied</span>
+                    <strong>150</strong>
+                </div>
+
+                <div class="status-item">
+                    <span>Shortlisted</span>
+                    <strong>95</strong>
+                </div>
+
+                <div class="status-item">
+                    <span>Interview</span>
+                    <strong>64</strong>
+                </div>
+
+                <div class="status-item">
+                    <span>Selected</span>
+                    <strong>45</strong>
+                </div>
+
+                <div class="status-item">
+                    <span>Rejected</span>
+                    <strong>66</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer class="page-footer">
+            © 2026 Recruitment & Placement Management System
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

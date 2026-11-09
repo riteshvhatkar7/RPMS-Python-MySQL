@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Process | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="avatar">R</div>
+            <h2>RPMS</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html" class="active">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="login.html">Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Placement Process</h2>
+                <p class="subtitle">Offers and Candidate Placement Management</p>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">A</div>
+                <div>
+                    <strong>System Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="page-heading">
+            <div>
+                <h2>Placement Management</h2>
+                <p>Track selected candidates, job offers and joining status.</p>
+            </div>
+
+            <a href="#offer-form" class="btn btn-primary">
+                + Create Offer
+            </a>
+        </section>
+
+        <!-- Placement Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-label">Selected Candidates</span>
+                <h2>65</h2>
+                <p>Successfully selected</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Offers Released</span>
+                <h2>55</h2>
+                <p>Offer letters generated</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Offers Accepted</span>
+                <h2>42</h2>
+                <p>Accepted by candidates</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Candidates Placed</span>
+                <h2>35</h2>
+                <p>Successfully joined</p>
+            </div>
+
+        </section>
+
+        <!-- Placement Workflow -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Placement Workflow</h2>
+            </div>
+
+            <div class="workflow-grid">
+
+                <div class="workflow-step">
+                    <span class="workflow-number">1</span>
+                    <h3>Selected</h3>
+                    <p>Candidate cleared interview rounds.</p>
+                </div>
+
+                <div class="workflow-step">
+                    <span class="workflow-number">2</span>
+                    <h3>Offer Released</h3>
+                    <p>Company issued an offer letter.</p>
+                </div>
+
+                <div class="workflow-step">
+                    <span class="workflow-number">3</span>
+                    <h3>Offer Accepted</h3>
+                    <p>Candidate accepted the offer.</p>
+                </div>
+
+                <div class="workflow-step">
+                    <span class="workflow-number">4</span>
+                    <h3>Joined</h3>
+                    <p>Candidate joined the company.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Search Placement Records</h2>
+            </div>
+
+            <form class="filter-form" action="#" method="get">
+
+                <div class="form-group">
+                    <label for="candidate">Candidate Name</label>
+                    <input
+                        type="search"
+                        id="candidate"
+                        name="candidate"
+                        placeholder="Search candidate"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <select id="company" name="company">
+                        <option value="">All Companies</option>
+                        <option>Tech Solutions</option>
+                        <option>Innovate Systems</option>
+                        <option>WebTech Pvt Ltd</option>
+                        <option>NextGen Technologies</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="placementStatus">Placement Status</label>
+                    <select id="placementStatus" name="status">
+                        <option value="">All Status</option>
+                        <option>Selected</option>
+                        <option>Offered</option>
+                        <option>Accepted</option>
+                        <option>Rejected</option>
+                        <option>Joined</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Search
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Placement Records -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Placement Records</h2>
+            </div>
+
+            <div class="table-responsive">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Candidate</th>
+                            <th>Company</th>
+                            <th>Job Title</th>
+                            <th>Offer Package</th>
+                            <th>Offer Date</th>
+                            <th>Joining Date</th>
+                            <th>Offer Status</th>
+                            <th>Placement Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Rahul Patil</td>
+                            <td>Tech Solutions</td>
+                            <td>Python Developer</td>
+                            <td>4.5 LPA</td>
+                            <td>08-Nov-2026</td>
+                            <td>01-Dec-2026</td>
+                            <td>
+                                <span class="status active">Accepted</span>
+                            </td>
+                            <td>
+                                <span class="status pending">Pending Joining</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Priya Sharma</td>
+                            <td>Innovate Systems</td>
+                            <td>Frontend Developer</td>
+                            <td>3.5 LPA</td>
+                            <td>07-Nov-2026</td>
+                            <td>15-Nov-2026</td>
+                            <td>
+                                <span class="status active">Accepted</span>
+                            </td>
+                            <td>
+                                <span class="status active">Joined</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Amit Jadhav</td>
+                            <td>WebTech Pvt Ltd</td>
+                            <td>Java Developer</td>
+                            <td>4.0 LPA</td>
+                            <td>06-Nov-2026</td>
+                            <td>Not Available</td>
+                            <td>
+                                <span class="status inactive">Rejected</span>
+                            </td>
+                            <td>
+                                <span class="status inactive">Not Placed</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Neha Patil</td>
+                            <td>NextGen Technologies</td>
+                            <td>Software Tester</td>
+                            <td>2.5 LPA</td>
+                            <td>09-Nov-2026</td>
+                            <td>20-Nov-2026</td>
+                            <td>
+                                <span class="status active">Accepted</span>
+                            </td>
+                            <td>
+                                <span class="status pending">Pending Joining</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Sneha Kulkarni</td>
+                            <td>Innovate Systems</td>
+                            <td>Frontend Developer</td>
+                            <td>3.8 LPA</td>
+                            <td>10-Nov-2026</td>
+                            <td>05-Dec-2026</td>
+                            <td>
+                                <span class="status pending">Offered</span>
+                            </td>
+                            <td>
+                                <span class="status pending">Offer Pending</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Create Offer Form -->
+        <section class="content-section" id="offer-form">
+
+            <div class="section-header">
+                <h2>Create Candidate Offer</h2>
+            </div>
+
+            <form id="offerForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="application">Application ID *</label>
+                        <select id="application" required>
+                            <option value="">Select Application</option>
+                            <option>APP001 - Rahul Patil</option>
+                            <option>APP002 - Priya Sharma</option>
+                            <option>APP004 - Neha Patil</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyName">Company *</label>
+                        <select id="companyName" required>
+                            <option value="">Select Company</option>
+                            <option>Tech Solutions</option>
+                            <option>Innovate Systems</option>
+                            <option>WebTech Pvt Ltd</option>
+                            <option>NextGen Technologies</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="package">Offered Package (LPA) *</label>
+                        <input
+                            type="number"
+                            id="package"
+                            min="0.01"
+                            step="0.01"
+                            placeholder="Example: 4.5"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="offerDate">Offer Date *</label>
+                        <input type="date" id="offerDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="joiningDate">Expected Joining Date</label>
+                        <input type="date" id="joiningDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="offerStatus">Offer Status *</label>
+                        <select id="offerStatus" required>
+                            <option value="">Select Status</option>
+                            <option>Released</option>
+                            <option>Accepted</option>
+                            <option>Rejected</option>
+                            <option>Expired</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button type="submit" class="btn btn-primary">
+                        Create Offer
+                    </button>
+
+                    <button type="reset" class="btn btn-secondary">
+                        Reset
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <footer class="page-footer">
+            © 2026 Recruitment & Placement Management System
+        </footer>
+
+    </main>
+
+</div>
+
+<script>
+    const offerForm = document.getElementById("offerForm");
+
+    offerForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const packageValue = Number(document.getElementById("package").value);
+
+        if (packageValue <= 0) {
+            alert("Offer package must be greater than zero.");
+            return;
+        }
+
+        alert("Offer form validation successful! This is a static UI prototype. Data is not saved.");
+    });
+</script>
+
+</body>
+</html>

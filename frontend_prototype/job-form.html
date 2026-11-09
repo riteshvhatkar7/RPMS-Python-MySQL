@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Job | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="avatar">R</div>
+            <h2>RPMS</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html" class="active">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="login.html">Logout</a>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Job Management</h2>
+                <p class="subtitle">Create and manage job openings</p>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">A</div>
+                <div>
+                    <strong>System Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="page-heading">
+            <div>
+                <h2>Add New Job</h2>
+                <p>Enter job details and eligibility requirements.</p>
+            </div>
+
+            <a href="jobs.html" class="btn btn-secondary">
+                Back to Jobs
+            </a>
+        </section>
+
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Job Information</h2>
+            </div>
+
+            <form id="jobForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="jobCode">Job Code *</label>
+                        <input
+                            type="text"
+                            id="jobCode"
+                            name="job_code"
+                            placeholder="Example: JOB006"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title *</label>
+                        <input
+                            type="text"
+                            id="jobTitle"
+                            name="job_title"
+                            placeholder="Enter job title"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company *</label>
+                        <select id="company" name="company_id" required>
+                            <option value="">Select Company</option>
+                            <option value="1">Tech Solutions</option>
+                            <option value="2">Innovate Systems</option>
+                            <option value="3">WebTech Pvt Ltd</option>
+                            <option value="5">NextGen Technologies</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="employmentType">Employment Type *</label>
+                        <select
+                            id="employmentType"
+                            name="employment_type"
+                            required
+                        >
+                            <option value="">Select Employment Type</option>
+                            <option value="FULL_TIME">Full Time</option>
+                            <option value="PART_TIME">Part Time</option>
+                            <option value="INTERNSHIP">Internship</option>
+                            <option value="CONTRACT">Contract</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Job Location *</label>
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="Enter job location"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="openings">Number of Openings *</label>
+                        <input
+                            type="number"
+                            id="openings"
+                            name="openings"
+                            min="1"
+                            placeholder="Enter vacancies"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="minPackage">Minimum Package (LPA) *</label>
+                        <input
+                            type="number"
+                            id="minPackage"
+                            name="min_package_lpa"
+                            min="0"
+                            step="0.01"
+                            placeholder="Example: 3.00"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="maxPackage">Maximum Package (LPA) *</label>
+                        <input
+                            type="number"
+                            id="maxPackage"
+                            name="max_package_lpa"
+                            min="0"
+                            step="0.01"
+                            placeholder="Example: 5.00"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deadline">Application Deadline *</label>
+                        <input
+                            type="date"
+                            id="deadline"
+                            name="application_deadline"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passingYear">Required Passing Year</label>
+                        <input
+                            type="number"
+                            id="passingYear"
+                            name="passing_year"
+                            min="2000"
+                            max="2100"
+                            placeholder="Example: 2026"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="minPercentage">Minimum Percentage</label>
+                        <input
+                            type="number"
+                            id="minPercentage"
+                            name="min_percentage"
+                            min="0"
+                            max="100"
+                            step="0.01"
+                            placeholder="Example: 60"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="maxBacklogs">Maximum Backlogs</label>
+                        <input
+                            type="number"
+                            id="maxBacklogs"
+                            name="max_backlogs"
+                            min="0"
+                            placeholder="Example: 0"
+                        >
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="requiredSkills">Required Skills *</label>
+                        <input
+                            type="text"
+                            id="requiredSkills"
+                            name="required_skills"
+                            placeholder="Python, MySQL, HTML, CSS"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="description">Job Description *</label>
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="5"
+                            placeholder="Enter job responsibilities and requirements..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobStatus">Job Status *</label>
+                        <select id="jobStatus" name="status" required>
+                            <option value="OPEN">Open</option>
+                            <option value="ON_HOLD">On Hold</option>
+                            <option value="CLOSED">Closed</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button type="submit" class="btn btn-primary">
+                        Save Job
+                    </button>
+
+                    <button type="reset" class="btn btn-secondary">
+                        Reset Form
+                    </button>
+
+                    <a href="jobs.html" class="btn btn-secondary">
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <footer class="page-footer">
+            © 2026 Recruitment & Placement Management System
+        </footer>
+
+    </main>
+
+</div>
+
+<script>
+    const jobForm = document.getElementById("jobForm");
+
+    jobForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const openings = Number(document.getElementById("openings").value);
+        const minPackage = Number(document.getElementById("minPackage").value);
+        const maxPackage = Number(document.getElementById("maxPackage").value);
+        const percentage = document.getElementById("minPercentage").value;
+        const backlogs = document.getElementById("maxBacklogs").value;
+
+        if (openings <= 0) {
+            alert("Number of openings must be greater than 0.");
+            return;
+        }
+
+        if (minPackage > maxPackage) {
+            alert("Minimum package cannot be greater than maximum package.");
+            return;
+        }
+
+        if (percentage !== "" && (Number(percentage) < 0 || Number(percentage) > 100)) {
+            alert("Minimum percentage must be between 0 and 100.");
+            return;
+        }
+
+        if (backlogs !== "" && Number(backlogs) < 0) {
+            alert("Backlog count cannot be negative.");
+            return;
+        }
+
+        alert("Job form validation successful! This is a static UI prototype. Data is not saved.");
+    });
+</script>
+
+</body>
+</html>

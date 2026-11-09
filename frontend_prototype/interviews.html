@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interviews | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="avatar">R</div>
+            <h2>RPMS</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html" class="active">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="login.html">Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Interviews</h2>
+                <p class="subtitle">Interview Scheduling and Feedback</p>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">A</div>
+                <div>
+                    <strong>System Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="page-heading">
+            <div>
+                <h2>Interview Management</h2>
+                <p>Schedule interviews and track candidate performance.</p>
+            </div>
+
+            <a href="#schedule-interview" class="btn btn-primary">
+                + Schedule Interview
+            </a>
+        </section>
+
+        <!-- Interview Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-label">Total Interviews</span>
+                <h2>85</h2>
+                <p>All scheduled interviews</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Upcoming</span>
+                <h2>18</h2>
+                <p>Scheduled interviews</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Completed</span>
+                <h2>55</h2>
+                <p>Interviews completed</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Pending Feedback</span>
+                <h2>12</h2>
+                <p>Feedback not submitted</p>
+            </div>
+
+        </section>
+
+        <!-- Search Filters -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Search Interviews</h2>
+            </div>
+
+            <form class="filter-form" action="#" method="get">
+
+                <div class="form-group">
+                    <label for="candidateSearch">Candidate Name</label>
+                    <input
+                        type="search"
+                        id="candidateSearch"
+                        name="candidate"
+                        placeholder="Enter candidate name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="round">Interview Round</label>
+                    <select id="round" name="round">
+                        <option value="">All Rounds</option>
+                        <option>Technical Round 1</option>
+                        <option>Technical Round 2</option>
+                        <option>HR Round</option>
+                        <option>Final Round</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="interviewStatus">Interview Status</label>
+                    <select id="interviewStatus" name="status">
+                        <option value="">All Status</option>
+                        <option>Scheduled</option>
+                        <option>Completed</option>
+                        <option>Cancelled</option>
+                        <option>Rescheduled</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Search
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Interview Records -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Interview Schedule</h2>
+            </div>
+
+            <div class="table-responsive">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Interview ID</th>
+                            <th>Candidate</th>
+                            <th>Company</th>
+                            <th>Job Title</th>
+                            <th>Interview Round</th>
+                            <th>Date & Time</th>
+                            <th>Mode</th>
+                            <th>Interviewer</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>INT001</td>
+                            <td>Rahul Patil</td>
+                            <td>Tech Solutions</td>
+                            <td>Python Developer</td>
+                            <td>Technical Round 1</td>
+                            <td>12-Nov-2026, 10:00 AM</td>
+                            <td>Online</td>
+                            <td>Rohit Mehta</td>
+                            <td>
+                                <span class="status pending">Scheduled</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>INT002</td>
+                            <td>Priya Sharma</td>
+                            <td>Innovate Systems</td>
+                            <td>Frontend Developer</td>
+                            <td>Technical Round 1</td>
+                            <td>13-Nov-2026, 11:00 AM</td>
+                            <td>Offline</td>
+                            <td>Neha Desai</td>
+                            <td>
+                                <span class="status pending">Scheduled</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>INT003</td>
+                            <td>Amit Jadhav</td>
+                            <td>WebTech Pvt Ltd</td>
+                            <td>Java Developer</td>
+                            <td>Technical Round 2</td>
+                            <td>08-Nov-2026, 02:00 PM</td>
+                            <td>Online</td>
+                            <td>Amit Joshi</td>
+                            <td>
+                                <span class="status active">Completed</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>INT004</td>
+                            <td>Neha Patil</td>
+                            <td>NextGen Technologies</td>
+                            <td>Software Testing Intern</td>
+                            <td>HR Round</td>
+                            <td>09-Nov-2026, 12:00 PM</td>
+                            <td>Offline</td>
+                            <td>Vikas Patil</td>
+                            <td>
+                                <span class="status active">Completed</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>INT005</td>
+                            <td>Sneha Kulkarni</td>
+                            <td>Innovate Systems</td>
+                            <td>Frontend Developer</td>
+                            <td>Final Round</td>
+                            <td>14-Nov-2026, 03:00 PM</td>
+                            <td>Online</td>
+                            <td>Priya Shah</td>
+                            <td>
+                                <span class="status pending">Scheduled</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Schedule Interview Form -->
+        <section class="content-section" id="schedule-interview">
+
+            <div class="section-header">
+                <h2>Schedule New Interview</h2>
+            </div>
+
+            <form id="interviewForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="application">Application *</label>
+                        <select id="application" required>
+                            <option value="">Select Application</option>
+                            <option value="APP001">APP001 - Rahul Patil</option>
+                            <option value="APP002">APP002 - Priya Sharma</option>
+                            <option value="APP003">APP003 - Amit Jadhav</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interviewRound">Interview Round *</label>
+                        <select id="interviewRound" required>
+                            <option value="">Select Round</option>
+                            <option>Technical Round 1</option>
+                            <option>Technical Round 2</option>
+                            <option>HR Round</option>
+                            <option>Final Round</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interviewDate">Interview Date *</label>
+                        <input type="date" id="interviewDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interviewTime">Interview Time *</label>
+                        <input type="time" id="interviewTime" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interviewMode">Interview Mode *</label>
+                        <select id="interviewMode" required>
+                            <option value="">Select Mode</option>
+                            <option>Online</option>
+                            <option>Offline</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interviewer">Interviewer Name *</label>
+                        <input
+                            type="text"
+                            id="interviewer"
+                            placeholder="Enter interviewer name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="meetingLink">Meeting Link / Venue</label>
+                        <input
+                            type="text"
+                            id="meetingLink"
+                            placeholder="Enter meeting link or interview venue"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        Schedule Interview
+                    </button>
+
+                    <button type="reset" class="btn btn-secondary">
+                        Reset
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- Interview Feedback -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Interview Feedback</h2>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="feedbackApplication">Application ID</label>
+                    <select id="feedbackApplication">
+                        <option value="">Select Application</option>
+                        <option>APP001</option>
+                        <option>APP002</option>
+                        <option>APP003</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedbackRound">Interview Round</label>
+                    <select id="feedbackRound">
+                        <option value="">Select Round</option>
+                        <option>Technical Round 1</option>
+                        <option>Technical Round 2</option>
+                        <option>HR Round</option>
+                        <option>Final Round</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="score">Score (0–100)</label>
+                    <input
+                        type="number"
+                        id="score"
+                        min="0"
+                        max="100"
+                        placeholder="Enter score"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="result">Interview Result</label>
+                    <select id="result">
+                        <option value="">Select Result</option>
+                        <option>Pass</option>
+                        <option>Fail</option>
+                        <option>On Hold</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="comments">Feedback Comments</label>
+                    <textarea
+                        id="comments"
+                        rows="4"
+                        placeholder="Enter interviewer feedback..."
+                    ></textarea>
+                </div>
+
+            </div>
+
+            <p class="form-note">
+                Feedback section is a static UI prototype and does not save records.
+            </p>
+
+        </section>
+
+        <footer class="page-footer">
+            © 2026 Recruitment & Placement Management System
+        </footer>
+
+    </main>
+
+</div>
+
+<script>
+    const interviewForm = document.getElementById("interviewForm");
+
+    interviewForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        alert("Interview form validation successful! This is a static UI prototype. Data is not saved.");
+    });
+</script>
+
+</body>
+</html>

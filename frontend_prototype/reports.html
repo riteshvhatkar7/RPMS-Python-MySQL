@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="avatar">R</div>
+            <h2>RPMS</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html" class="active">Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="login.html">Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Reports & Analytics</h2>
+                <p class="subtitle">Recruitment and Placement Reports</p>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">A</div>
+                <div>
+                    <strong>System Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="page-heading">
+            <div>
+                <h2>Reports Dashboard</h2>
+                <p>View recruitment performance and placement statistics.</p>
+            </div>
+
+            <button
+                type="button"
+                class="btn btn-primary"
+                onclick="window.print()"
+            >
+                Print Reports
+            </button>
+        </section>
+
+        <!-- Overall Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-label">Total Candidates</span>
+                <h2>320</h2>
+                <p>Registered candidates</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Open Jobs</span>
+                <h2>32</h2>
+                <p>Available opportunities</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Total Applications</span>
+                <h2>250</h2>
+                <p>Applications received</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Placed Candidates</span>
+                <h2>35</h2>
+                <p>Successfully placed</p>
+            </div>
+
+        </section>
+
+        <!-- Report Filters -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Report Filters</h2>
+            </div>
+
+            <form class="filter-form" action="#" method="get">
+
+                <div class="form-group">
+                    <label for="reportType">Report Type</label>
+                    <select id="reportType" name="report_type">
+                        <option value="">All Reports</option>
+                        <option>Candidates by Technology</option>
+                        <option>Open Jobs</option>
+                        <option>Applications by Status</option>
+                        <option>Company-wise Placements</option>
+                        <option>Placed Candidates</option>
+                        <option>Unplaced Candidates</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fromDate">From Date</label>
+                    <input type="date" id="fromDate" name="from_date">
+                </div>
+
+                <div class="form-group">
+                    <label for="toDate">To Date</label>
+                    <input type="date" id="toDate" name="to_date">
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Generate Report
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Candidates by Technology -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>1. Candidates by Technology</h2>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Technology</th>
+                            <th>Total Candidates</th>
+                            <th>Active Candidates</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Python</td>
+                            <td>85</td>
+                            <td>78</td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>70</td>
+                            <td>64</td>
+                        </tr>
+                        <tr>
+                            <td>Frontend Development</td>
+                            <td>65</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td>Testing</td>
+                            <td>45</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Other Technologies</td>
+                            <td>55</td>
+                            <td>50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Open Jobs -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>2. Open Jobs Report</h2>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Job ID</th>
+                            <th>Job Title</th>
+                            <th>Company</th>
+                            <th>Location</th>
+                            <th>Openings</th>
+                            <th>Package (LPA)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>JOB001</td>
+                            <td>Python Developer</td>
+                            <td>Tech Solutions</td>
+                            <td>Pune</td>
+                            <td>5</td>
+                            <td>3.0 - 5.0</td>
+                            <td><span class="status active">Open</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>JOB002</td>
+                            <td>Frontend Developer</td>
+                            <td>Innovate Systems</td>
+                            <td>Mumbai</td>
+                            <td>3</td>
+                            <td>2.5 - 4.0</td>
+                            <td><span class="status active">Open</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>JOB003</td>
+                            <td>Java Developer</td>
+                            <td>WebTech Pvt Ltd</td>
+                            <td>Kolhapur</td>
+                            <td>4</td>
+                            <td>3.0 - 4.5</td>
+                            <td><span class="status active">Open</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Applications by Status -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>3. Applications by Status</h2>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application Status</th>
+                            <th>Total Applications</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Applied</td>
+                            <td>85</td>
+                            <td>34%</td>
+                        </tr>
+                        <tr>
+                            <td>Shortlisted</td>
+                            <td>65</td>
+                            <td>26%</td>
+                        </tr>
+                        <tr>
+                            <td>Interview</td>
+                            <td>40</td>
+                            <td>16%</td>
+                        </tr>
+                        <tr>
+                            <td>Selected</td>
+                            <td>25</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>Offered</td>
+                            <td>15</td>
+                            <td>6%</td>
+                        </tr>
+                        <tr>
+                            <td>Rejected</td>
+                            <td>20</td>
+                            <td>8%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Company-wise Placements -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>4. Company-wise Placements</h2>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Total Selected</th>
+                            <th>Total Joined</th>
+                            <th>Pending Joining</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Tech Solutions</td>
+                            <td>12</td>
+                            <td>8</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Innovate Systems</td>
+                            <td>10</td>
+                            <td>7</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>WebTech Pvt Ltd</td>
+                            <td>8</td>
+                            <td>6</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>NextGen Technologies</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Placed Candidates -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>5. Placed Candidates</h2>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Candidate ID</th>
+                            <th>Candidate Name</th>
+                            <th>Technology</th>
+                            <th>Company</th>
+                            <th>Package (LPA)</th>
+                            <th>Joining Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>CAN002</td>
+                            <td>Priya Sharma</td>
+                            <td>Frontend</td>
+                            <td>Innovate Systems</td>
+                            <td>3.5</td>
+                            <td>15-Nov-2026</td>
+                        </tr>
+                        <tr>
+                            <td>CAN008</td>
+                            <td>Amit Jadhav</td>
+                            <td>Java</td>
+                            <td>WebTech Pvt Ltd</td>
+                            <td>4.0</td>
+                            <td>10-Nov-2026</td>
+                        </tr>
+                        <tr>
+                            <td>CAN012</td>
+                            <td>Neha Patil</td>
+                            <td>Testing</td>
+                            <td>NextGen Technologies</td>
+                            <td>2.5</td>
+                            <td>20-Nov-2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Unplaced Candidates -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>6. Unplaced Candidates</h2>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Candidate ID</th>
+                            <th>Candidate Name</th>
+                            <th>Technology</th>
+                            <th>Applications</th>
+                            <th>Current Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>CAN001</td>
+                            <td>Rahul Patil</td>
+                            <td>Python</td>
+                            <td>3</td>
+                            <td><span class="status pending">Interview</span></td>
+                        </tr>
+                        <tr>
+                            <td>CAN005</td>
+                            <td>Vikas More</td>
+                            <td>Python</td>
+                            <td>2</td>
+                            <td><span class="status inactive">Not Placed</span></td>
+                        </tr>
+                        <tr>
+                            <td>CAN010</td>
+                            <td>Sneha Kulkarni</td>
+                            <td>Frontend</td>
+                            <td>4</td>
+                            <td><span class="status pending">Offer Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <footer class="page-footer">
+            © 2026 Recruitment & Placement Management System
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

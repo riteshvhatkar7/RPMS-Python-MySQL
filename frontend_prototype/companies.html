@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="avatar">R</div>
+            <h2>RPMS</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="candidates.html">Candidates</a>
+            <a href="companies.html" class="active">Companies</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="applications.html">Applications</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="placement-process.html">Placement Process</a>
+            <a href="reports.html">Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="login.html">Logout</a>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Companies</h2>
+                <p class="subtitle">Manage registered companies</p>
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar">A</div>
+                <div>
+                    <strong>System Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <div>
+                <h2>Company Management</h2>
+                <p>View and manage company information.</p>
+            </div>
+
+            <a href="job-form.html" class="btn btn-primary">
+                + Add Job Opening
+            </a>
+
+        </section>
+
+        <!-- Company Summary -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-label">Total Companies</span>
+                <h2>35</h2>
+                <p>Registered companies</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Active Companies</span>
+                <h2>30</h2>
+                <p>Currently active</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Partner Companies</span>
+                <h2>18</h2>
+                <p>Recruitment partners</p>
+            </div>
+
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="content-section">
+
+            <div class="section-header">
+                <h2>Company Directory</h2>
+            </div>
+
+            <form class="filter-form" action="#" method="get">
+
+                <div class="form-group">
+                    <label for="companySearch">Search Company</label>
+                    <input
+                        type="search"
+                        id="companySearch"
+                        name="search"
+                        placeholder="Company name or code"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="industry">Industry</label>
+                    <select id="industry" name="industry">
+                        <option value="">All Industries</option>
+                        <option>Information Technology</option>
+                        <option>Software Development</option>
+                        <option>Banking</option>
+                        <option>Manufacturing</option>
+                        <option>Consulting</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="companyStatus">Status</label>
+                    <select id="companyStatus" name="status">
+                        <option value="">All Status</option>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Search
+                </button>
+
+            </form>
+
+            <!-- Company Table -->
+            <div class="table-responsive">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Company ID</th>
+                            <th>Company Name</th>
+                            <th>Industry</th>
+                            <th>Contact Person</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Location</th>
+                            <th>Open Jobs</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>COM001</td>
+                            <td>Tech Solutions</td>
+                            <td>Information Technology</td>
+                            <td>Rohit Mehta</td>
+                            <td>hr@techsolutions.com</td>
+                            <td>9876543210</td>
+                            <td>Pune</td>
+                            <td>5</td>
+                            <td>
+                                <span class="status active">Active</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>COM002</td>
+                            <td>Innovate Systems</td>
+                            <td>Software Development</td>
+                            <td>Priya Shah</td>
+                            <td>careers@innovate.com</td>
+                            <td>9876543211</td>
+                            <td>Mumbai</td>
+                            <td>3</td>
+                            <td>
+                                <span class="status active">Active</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>COM003</td>
+                            <td>WebTech Pvt Ltd</td>
+                            <td>Information Technology</td>
+                            <td>Amit Joshi</td>
+                            <td>hr@webtech.com</td>
+                            <td>9876543212</td>
+                            <td>Kolhapur</td>
+                            <td>2</td>
+                            <td>
+                                <span class="status active">Active</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>COM004</td>
+                            <td>Global Finance Ltd</td>
+                            <td>Banking</td>
+                            <td>Neha Desai</td>
+                            <td>jobs@globalfinance.com</td>
+                            <td>9876543213</td>
+                            <td>Pune</td>
+                            <td>0</td>
+                            <td>
+                                <span class="status inactive">Inactive</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>COM005</td>
+                            <td>NextGen Technologies</td>
+                            <td>Software Development</td>
+                            <td>Vikas Patil</td>
+                            <td>hr@nextgen.com</td>
+                            <td>9876543214</td>
+                            <td>Bengaluru</td>
+                            <td>4</td>
+                            <td>
+                                <span class="status active">Active</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <footer class="page-footer">
+            © 2026 Recruitment & Placement Management System
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>
