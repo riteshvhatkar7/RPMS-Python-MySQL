@@ -1,12 +1,16 @@
+
 import uuid
 
 from rpms.exception.exceptions import (
     CandidateNotFoundError,
     JobNotFoundError,
+    JobNotOpenError,
     DuplicateApplicationError,
     CandidateNotEligibleError
 )
+
 from rpms.model.application import Application
+
 
 class ApplicationService:
 
@@ -17,6 +21,7 @@ class ApplicationService:
         self.eligibility_service = eligibility_service
 
     def apply_for_job(self, candidate_id: int, job_id: int) -> int:
+
         candidate = self.candidate_dao.find_by_id(candidate_id)
         if not candidate:
             raise CandidateNotFoundError("Candidate not found")
@@ -25,8 +30,13 @@ class ApplicationService:
         if not job:
             raise JobNotFoundError("Job not found")
 
+        if job.status != "OPEN":
+            raise JobNotOpenError("This job is not open for applications")
+
         if self.application_dao.exists(candidate_id, job_id):
-            raise DuplicateApplicationError("Candidate has already applied for this job")
+            raise DuplicateApplicationError(
+                "Candidate has already applied for this job"
+            )
 
         reasons = self.eligibility_service.get_failure_reasons(candidate, job)
         if reasons:
