@@ -13,7 +13,6 @@
 
     <!-- Sidebar -->
     <aside class="sidebar">
-
         <div class="sidebar-brand">
             <div class="avatar">R</div>
             <h2>RPMS</h2>
@@ -33,7 +32,6 @@
         <div class="sidebar-footer">
             <a href="login.html">Logout</a>
         </div>
-
     </aside>
 
     <!-- Main Content -->
@@ -57,7 +55,7 @@
         <!-- Page Heading -->
         <section class="page-heading">
             <div>
-                <h2>Candidate Registration Form</h2>
+                <h2>New Candidate Registration</h2>
                 <p>Enter the candidate's personal and academic details.</p>
             </div>
         </section>
@@ -85,7 +83,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="fullName">Full Name *</label>
+                        <label for="fullName">Candidate Full Name *</label>
                         <input
                             type="text"
                             id="fullName"
@@ -96,7 +94,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email Address *</label>
+                        <label for="email">Candidate Email *</label>
                         <input
                             type="email"
                             id="email"
@@ -129,11 +127,7 @@
 
                     <div class="form-group">
                         <label for="qualification">Qualification *</label>
-                        <select
-                            id="qualification"
-                            name="qualification"
-                            required
-                        >
+                        <select id="qualification" name="qualification" required>
                             <option value="">Select Qualification</option>
                             <option>BSc Computer Science</option>
                             <option>BCA</option>
@@ -154,6 +148,7 @@
                             name="passing_year"
                             min="2000"
                             max="2035"
+                            step="1"
                             placeholder="Example: 2026"
                             required
                         >
@@ -196,11 +191,7 @@
 
                     <div class="form-group">
                         <label for="technology">Primary Technology *</label>
-                        <select
-                            id="technology"
-                            name="primary_technology"
-                            required
-                        >
+                        <select id="technology" name="primary_technology" required>
                             <option value="">Select Technology</option>
                             <option>Python</option>
                             <option>Java</option>
@@ -220,7 +211,6 @@
                 </p>
 
                 <div class="form-actions">
-
                     <button type="submit" class="btn btn-primary">
                         Save Candidate
                     </button>
@@ -228,7 +218,6 @@
                     <a href="candidates.html" class="btn btn-secondary">
                         Cancel
                     </a>
-
                 </div>
 
             </form>
@@ -236,7 +225,7 @@
         </section>
 
         <footer class="page-footer">
-            © 2026 Recruitment & Placement Management System
+            &copy; 2026 Recruitment & Placement Management System
         </footer>
 
     </main>
@@ -247,24 +236,79 @@
     const candidateForm = document.getElementById("candidateForm");
 
     candidateForm.addEventListener("submit", function(event) {
-
         event.preventDefault();
 
-        const percentage = Number(
-            document.getElementById("percentage").value
-        );
+        const candidateCode = document.getElementById("candidateCode");
+        const nameInput = document.getElementById("fullName");
+        const emailInput = document.getElementById("email");
+        const mobileInput = document.getElementById("mobile");
 
-        const backlog = Number(
-            document.getElementById("backlog").value
-        );
+        // Remove unnecessary spaces
+        candidateCode.value = candidateCode.value.trim();
+        nameInput.value = nameInput.value.trim();
+        emailInput.value = emailInput.value.trim();
+        mobileInput.value = mobileInput.value.trim();
 
-        if (percentage < 0 || percentage > 100) {
-            alert("Percentage must be between 0 and 100.");
+        const passingYearInput = document.getElementById("passingYear");
+        const percentageInput = document.getElementById("percentage");
+        const backlogInput = document.getElementById("backlog");
+
+        const passingYear = Number(passingYearInput.value);
+        const percentage = Number(percentageInput.value);
+        const backlog = Number(backlogInput.value);
+
+        if (!candidateCode.value) {
+            alert("Please enter candidate code.");
+            candidateCode.focus();
             return;
         }
 
-        if (backlog < 0 || !Number.isInteger(backlog)) {
+        if (!nameInput.value) {
+            alert("Please enter candidate name.");
+            nameInput.focus();
+            return;
+        }
+
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(emailInput.value)) {
+            alert("Please enter a valid email address.");
+            emailInput.focus();
+            return;
+        }
+
+        if (!/^[0-9]{10}$/.test(mobileInput.value)) {
+            alert("Mobile number must contain exactly 10 digits.");
+            mobileInput.focus();
+            return;
+        }
+
+        if (
+            !Number.isInteger(passingYear) ||
+            passingYear < 2000 ||
+            passingYear > 2035
+        ) {
+            alert("Passing year must be between 2000 and 2035.");
+            passingYearInput.focus();
+            return;
+        }
+
+        if (
+            percentageInput.value === "" ||
+            !Number.isFinite(percentage) ||
+            percentage < 0 ||
+            percentage > 100
+        ) {
+            alert("Percentage must be between 0 and 100.");
+            percentageInput.focus();
+            return;
+        }
+
+        if (
+            backlogInput.value === "" ||
+            !Number.isInteger(backlog) ||
+            backlog < 0
+        ) {
             alert("Backlog count must be a valid non-negative integer.");
+            backlogInput.focus();
             return;
         }
 
@@ -272,7 +316,6 @@
             "Candidate form validated successfully. " +
             "This is a static UI prototype; data is not saved."
         );
-
     });
 </script>
 

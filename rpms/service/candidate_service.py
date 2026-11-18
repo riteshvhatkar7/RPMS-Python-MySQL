@@ -1,3 +1,4 @@
+
 from rpms.exception.exceptions import CandidateNotFoundError
 from rpms.util.validation import (
     is_valid_email,
@@ -6,12 +7,17 @@ from rpms.util.validation import (
     is_valid_backlog_count
 )
 
+
 class CandidateService:
 
     def __init__(self, candidate_dao):
         self.candidate_dao = candidate_dao
 
     def add_candidate(self, candidate):
+        # Remove extra spaces from email and mobile
+        candidate.email = candidate.email.strip()
+        candidate.mobile = candidate.mobile.strip()
+
         if not is_valid_email(candidate.email):
             raise ValueError("Invalid email")
 
@@ -34,8 +40,12 @@ class CandidateService:
 
     def get_candidate(self, candidate_id):
         candidate = self.candidate_dao.find_by_id(candidate_id)
+
         if not candidate:
-            raise CandidateNotFoundError(f"Candidate ID {candidate_id} not found")
+            raise CandidateNotFoundError(
+                f"Candidate ID {candidate_id} not found"
+            )
+
         return candidate
 
     def get_all_candidates(self):
